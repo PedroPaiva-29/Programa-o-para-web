@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Exemplo 25</title>
+</head>
+<body>
+<div class="container-sm">
+<h1>Cadastro Curso/Programa</h1>
+    <div class="row">
+        <div class="col-4">
+            <label for="">Nome do curso</label>
+            <input type="text" name="txtnome" id="txtnome" class="form-control">
+        </div>
+        <div class="col-4">
+            <label for="">Código</label>
+            <input type="text" name="txtcodigo" id="txtcodigo" class="form-control">
+        </div>
+        <div class="col-4">
+            <label for="">Modalidade</label>
+            <select class="form-select" aria-label="Default select example" >
+                <option selected>Selecione</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <label for="">Carga Horaria</label>
+            <input type="text" name="txtcarga" id="txtcarga" class="form-control">
+        </div>
+        <div class="col-4">
+            <label for="">Publico Alvo</label>
+            <input type="text" name="txtalvo" id="txtalvo" class="form-control">
+        </div>
+        <div class="col-4">
+            <label for="">CAP (pontos)</label>
+            <input type="text" name="txtcap" id="txtcap" class="form-control">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label for="">Coodernador</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Selecione o coodernador</option>
+                <option value="1">Flávio</option>
+                <option value="2">João</option>
+                <option value="3">Fernando</option>
+            </select>
+        </div>
+        <div class="col-6">
+            <label for="">Trilha de conhecimento</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Selecione uma ilha</option>
+                <option value="1">4</option>
+                <option value="2">5</option>
+                <option value="3">6</option>
+            </select>
+        </div>
+    </div>
+    <div class="d-flex flex-row-reverse mt-3" class="form-control">
+            <button type="button" class="btn btn-primary">Cadastrar</button>
+           <button type="button" class="btn btn-outline">Limpar</button>
+        </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
