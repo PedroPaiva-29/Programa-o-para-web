@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Exemplo 20 Java Script - Bootstrap</title>
+</head>
+
+<body>
+    <div class="container-sm">
+        <h1>Exemplo 20 Java Script - Bootstrap</h1>
+        <h2>Algoritmo em Java Script para calcular e classificar o IMC de uma pessoa.</h2>
+        <div class="alert alert-primary" role="alert">
+            <p>Para o calculo do IMC usamos a fórmula: IMC=peso/(altura*altura)</p>
+            <p>Ja a classificação do IMC é realizada da seguinte maneira:</p>
+            <ul>
+                <li>IMC <18,5kg /m2 - baixo peso. </li>
+                <li>IMC >18,5 até 24,9kg/m2 - eutrofia (peso adequado)</li>
+                <li>IMC ≥25 até 29,9kg/m2 - sobrepeso.</li>
+                <li>IMC >30,0kg/m2 até 34,9kg/m2 - obesidade grau 1.</li>
+                <li>IMC >35kg/m2 até 39,9kg/m2 - obesidade grau 2.</li>
+                <li>IMC > 40kg/m2 - obesidade extrema.</li>
+            </ul>
+            <div class="form-group">
+                <label for="">Informe o seu peso</label>
+                <input type="text" name="txtPeso" id="txtPeso" class="form-control">
+
+            </div>
+            <div class="form-group">
+                <label for="">Informe a sua altura</label>
+                <input type="text" name="txtAltura" id="txtAltura" class="form-control">
+
+            </div>
+            <div class="mt-4">
+                <button type="button" class="btn btn-success" onclick="calcularIMC()">Clique aqui para verificar o seu
+                    IMC</button>
+            </div>
+        </div>
+        <div class="alert alert-warning" role="alert">
+            <h3 id="imc"></h3>
+            <h3 id="classificacaoIMC"></h3>
+        </div>
+    </div>
+    <script>
+        function calcularIMC() {
+            var peso = document.getElementById("txtPeso").value;
+            var altura = document.getElementById("txtAltura").value;
+            var imc = peso / (altura * altura);
+            document.getElementById("imc").innerHTML = "O IMC é igual : " + imc.toFixed(2);
+            if (imc <= 18.5) {
+                document.getElementById("classificacaoIMC").innerHTML = "Pessoa abaixo do peso";
+            }
+            else if ((imc > 18, 5) && (imc <= 24.9)) {
+                document.getElementById("classificacaoIMC").innerHTML = "Pessoa com peso normal";
+            } else if ((imc > 24.9) && (imc <= 29.9)) {
+                document.getElementById("classificacaoIMC").innerHTML = "Pessoa com sobrepeso";
+            } else {
+                document.getElementById("classificacaoIMC").innerHTML = "Pessoa obesa";
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
